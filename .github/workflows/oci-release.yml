@@ -20,8 +20,8 @@ jobs:
       uses: appany/helm-oci-chart-releaser@v0.4.2
       with:
         name: aws-standalone-cp-gpu
-        repository: foexle/k0rdent-templates
-        tag: 0.0.2
+        repository: sk4lf/k0rdent-templates
+        tag: 0.0.1
         path: charts/aws-standalone-cp-gpu
         registry: ghcr.io
         registry_username: ${{ github.actor }}
