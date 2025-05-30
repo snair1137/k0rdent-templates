@@ -21,7 +21,7 @@ jobs:
       with:
         name: aws-standalone-cp-gpu
         repository: sk4lf/k0rdent-templates
-        tag: 0.0.1
+        tag: 0.0.2
         path: charts/aws-standalone-cp-gpu
         registry: ghcr.io
         registry_username: ${{ github.actor }}
