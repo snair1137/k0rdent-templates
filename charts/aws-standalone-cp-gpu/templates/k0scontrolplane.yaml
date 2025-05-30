@@ -18,6 +18,15 @@ spec:
       metadata:
         name: k0s
       spec:
+        api:
+          extraArgs:
+            anonymous-auth: "true"
+            {{- if and (.Values.k0s.auth) (.Values.k0s.auth.enabled) }}
+            authentication-config: "/etc/k0s/auth/auth-config.yaml"
+            {{- end }}
+          {{- with .Values.k0s.api.extraArgs }}
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
         network:
           provider: custom
           kubeProxy:
